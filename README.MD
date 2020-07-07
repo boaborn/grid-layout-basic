@@ -1,1 +1,1 @@
-![Outpu(./output.png)
+![Output](output.png)
