@@ -36,6 +36,7 @@
 */
 
 // METHOD 2: Line names
+/*
 .challenge {
   width: 1000px;
   margin: 30px auto;
@@ -66,6 +67,46 @@
   
   .footer {
     grid-column: col-start 1 / grid-end;
+  }
+
+}
+*/
+
+//METHOD 3: Area names
+.challenge {
+  width: 1000px;
+  margin: 30px auto;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  display: grid;
+  grid-gap: 30px;
+  
+  grid-template-areas: "head head head head" 
+                       "box box box side"
+                       "main main main side"
+                       "foot foot foot foot";
+    
+  & > * {
+    color: white;
+    background-color: orangered;
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  .header {
+    grid-area: head;
+  }
+  
+  .sidebar {
+    grid-area: side;
+  }
+  
+  .main-content {
+    grid-area: main;
+  }
+  
+  .footer {
+    grid-area: foot;
   }
 
 }
